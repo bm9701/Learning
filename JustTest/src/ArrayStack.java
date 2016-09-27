@@ -1,13 +1,13 @@
 /**
  * Created by bm9701 on 26.09.2016.
  */
-public class ArrayStack {
+public class ArrayStack extends AbstractStack {
     private Object[] elements = new Object[0];
-    private int size;
+    /*private int size;
 
     public int size() {
         return size;
-    }
+    }*/
 
     public void push(Object value) {
         ensureCapacity(size+1);
@@ -25,11 +25,11 @@ public class ArrayStack {
         elements = newElements;
     }
 
-    public Object pop() {
-        if(size == 0) {
+    protected Object pop_child() {
+        /*if(size == 0) {
             return null;
-        }
-        return elements[--size];
+        }*/
+        return elements[size];
     }
 
     public Object peek() {
